@@ -11,6 +11,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ArticleCardComponent } from './articles/article-card/article-card.component';
+import { HttpClientModule } from "@angular/common/http";
+import { ArticleService } from './core/article.service';
 
 @NgModule({
   declarations: [
@@ -28,8 +30,9 @@ import { ArticleCardComponent } from './articles/article-card/article-card.compo
     MatButtonModule,
     MatGridListModule,
     MatCardModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [ArticleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

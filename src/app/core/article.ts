@@ -1,11 +1,20 @@
 export interface Article {
     id: number;
-    title: string;
-    author_id: number;
-    thumbnail: string;
-    lead: string;
-    release_date: Date;
-    last_modified: Date;
-    main_body: string;
+    title: {
+        rendered: string
+    },
+    author: number;
+    //thumbnail: string;
+    excerpt: {
+        rendered: string,
+        protected: boolean
+    },
+    content: {
+        rendered: string,
+        protected: boolean
+    },
+    date: string;
+    modified: string;
+    categories: number[],
     tags: string[];
 }
