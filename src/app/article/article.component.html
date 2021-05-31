@@ -2,7 +2,8 @@
 <p [innerHTML]="article?.content?.rendered"></p>
 <p>Published: @{{ article?.date }}</p>
 <p>Modified: @{{ article?.modified }}</p>
-<p>Author: {{ article?.author }}</p>
+<p>Author: {{ author?.name }}</p>
+<!--img [src]=" {{ author?.avatar_urls[24] }} "-->
 <p>Categories: {{ article?.categories }}</p>
-<p>Tags [{{ article?.tags }}]</p>
+<p>Tags: [{{ article?.tags }}]</p>
 </mat-card>

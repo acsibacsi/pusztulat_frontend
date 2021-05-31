@@ -1,10 +1,9 @@
 export interface Article {
-    id: number;
+    id: number,
     title: {
         rendered: string
     },
-    author: number;
-    //thumbnail: string;
+    author: number,
     excerpt: {
         rendered: string,
         protected: boolean
@@ -13,8 +12,8 @@ export interface Article {
         rendered: string,
         protected: boolean
     },
-    date: string;
-    modified: string;
+    date: string,
+    modified: string,
     categories: number[],
-    tags: string[];
+    tags: string[]
 }
