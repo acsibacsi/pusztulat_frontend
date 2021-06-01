@@ -22,7 +22,7 @@ pipeline {
 
         stage('Unit tests') {
           steps {
-            sh 'export CHROME_BIN=\'/usr/bin/chromium\''
+            sh 'export CHROME_BIN=\'/usr/bin/google-chrome\''
             sh '''
 
 
