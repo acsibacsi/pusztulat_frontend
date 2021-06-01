@@ -22,7 +22,13 @@ pipeline {
 
         stage('Unit tests') {
           steps {
-            sh 'npm run-script test'
+            sh 'export CHROME_BIN=\'/usr/bin/google-chrome\''
+            sh '''
+
+
+
+
+npm run-script test'''
           }
         }
 
