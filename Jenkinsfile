@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'geekykaran/headless-chrome-node-docker'
+      image 'node:alpine'
     }
 
   }
@@ -9,6 +9,7 @@ pipeline {
     stage('Install') {
       steps {
         sh 'npm install'
+        sh 'apk add chromium'
       }
     }
 
