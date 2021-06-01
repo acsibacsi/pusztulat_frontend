@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'node:alpine'
+      image 'tiangolo/node-frontend'
     }
 
   }
@@ -9,7 +9,6 @@ pipeline {
     stage('Install') {
       steps {
         sh 'npm install'
-        sh 'apk add chromium'
       }
     }
 
