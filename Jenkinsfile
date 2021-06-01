@@ -9,8 +9,6 @@ pipeline {
     stage('Install') {
       steps {
         sh 'npm install'
-        sh 'npm cache clean -f'
-        sh 'npm install -g n'
       }
     }
 
