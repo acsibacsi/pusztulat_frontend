@@ -9,7 +9,7 @@ pipeline {
     stage('Install') {
       steps {
         sh 'npm install'
-        sh 'apk add --no-cache  chromium --repository=http://dl-cdn.alpinelinux.org/alpine/v3.10/main'
+        sh 'apk add chromium'
       }
     }
 
@@ -41,5 +41,8 @@ npm run-script test'''
       }
     }
 
+  }
+  environment {
+    PATH = '$PATH:/sbin'
   }
 }
