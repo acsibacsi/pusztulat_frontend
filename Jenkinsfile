@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'markadams/chromium-xvfb-js'
+      image 'geekykaran/headless-chrome-node-docker'
     }
 
   }
