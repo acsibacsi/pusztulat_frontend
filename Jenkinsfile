@@ -9,6 +9,7 @@ pipeline {
     stage('Install') {
       steps {
         sh 'npm install'
+        sh 'apk add chromium'
       }
     }
 
@@ -22,7 +23,6 @@ pipeline {
 
         stage('Unit tests') {
           steps {
-            sh 'export CHROME_BIN=\'/usr/bin/google-chrome\''
             sh '''
 
 
