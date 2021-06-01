@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'tiangolo/node-frontend'
+      image 'node:latest'
     }
 
   }
