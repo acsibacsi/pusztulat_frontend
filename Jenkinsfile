@@ -8,9 +8,10 @@ pipeline {
   stages {
     stage('Install') {
       steps {
-        sh 'nvm install 12'
-        sh 'nvm use 12'
-        sh 'npm install @angular/cli -g'
+        sh 'ng update @angular/core@11 @angular/cli@11'
+        sh 'ng update'
+        sh 'ng update @angular/core@12 @angular/cli@12'
+        sh 'ng update'
         sh 'npm install'
       }
     }
